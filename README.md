@@ -79,7 +79,7 @@ server
 import socket
 from datetime import datetime
 s = socket.socket()
-s.bind(('localhost', 5000))
+s.bind(('localhost', 5001))
 s.listen(5)
 c, addr = s.accept()
 print("Client Address :", addr)
@@ -94,7 +94,7 @@ client
 ```
 import socket
 s = socket.socket()
-s.connect(('localhost', 5000))
+s.connect(('localhost', 5001))
 print(s.getsockname())
 print(s.recv(1024).decode())
 s.send("Acknowledgement received from the client".encode())
